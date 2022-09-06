@@ -77,6 +77,6 @@ func HandConn(client net.Conn) {
 }
 
 func main() {
-	server := NewServer("tcp", "192.168.31.205:1080")
+	server := NewServer("tcp", ":1080")
 	server.Start()
 }
