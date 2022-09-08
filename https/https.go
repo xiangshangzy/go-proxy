@@ -1,4 +1,4 @@
-package proxy
+package https
 
 import (
 	"bytes"
@@ -75,8 +75,7 @@ func HandConn(client net.Conn) {
 	go io.Copy(server, client)
 	go io.Copy(client, server)
 }
-
 func main() {
-	server := NewServer("tcp", ":1080")
+	server := NewServer("tcp", ":443")
 	server.Start()
 }
